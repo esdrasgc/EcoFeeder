@@ -3,7 +3,7 @@ using UnityEngine;
 public class Animal : MonoBehaviour
 {
     public float speed = 5.0f;  // Velocidade padrão de movimento
-    private Transform playerTransform;  // Referência para o transform do jogador
+    public Transform playerTransform;  // Referência para o transform do jogador
 
     protected virtual void Start()     // Esse virtual serve pra que as classes filhas possam sobrescrever esse método
     {
@@ -21,6 +21,8 @@ public class Animal : MonoBehaviour
         if (playerTransform != null)
         {
             MoveTowardsPlayer();
+            transform.LookAt(playerTransform);
+            // 
         }
     }
 
