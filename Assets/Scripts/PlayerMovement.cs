@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour //Cuida do movimento do jogador
 {
-    public float speed = 5.0f;
+    private float speed = 9.0f;
     private Rigidbody rb;
 
     void Start()
