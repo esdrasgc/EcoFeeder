@@ -12,12 +12,17 @@ public class Player : MonoBehaviour
 
     private Vector3 look_direction;
 
+    private int numberHiyts = 0;
+
+    private Rigidbody rb;
+
 
     private void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
         yValue = transform.position.y;
         look_direction = Vector3.forward;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -36,10 +41,15 @@ public class Player : MonoBehaviour
             if (playerAnimator.GetBool("PlayerIsMoving")) playerAnimator.SetBool("PlayerIsMoving", false);
             // gameObject.transform.LookAt(look_direction);
             gameObject.transform.forward = look_direction;
-
           
-            print("Player is not moving");
         }
         
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Animal"){
+            numberHiyts++;
+            Debug.Log("Number of hits: " + numberHiyts);
+        }
     }
 }
