@@ -1067,6 +1067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499677354}
   - component: {fileID: 499677353}
+  - component: {fileID: 499677355}
   m_Layer: 0
   m_Name: Mesh_LOD0
   m_TagString: Untagged
@@ -1162,6 +1163,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 885383553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499677355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499677352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e952f0d3c4f2f74e820cbc623bf7369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  playerTransform: {fileID: 0}
 --- !u!1 &514068087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,6 +1800,7 @@ GameObject:
   - component: {fileID: 885383553}
   - component: {fileID: 885383552}
   - component: {fileID: 885383551}
+  - component: {fileID: 885383554}
   m_Layer: 0
   m_Name: Squid
   m_TagString: Untagged
@@ -1867,6 +1883,20 @@ Transform:
   - {fileID: 1639098443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885383554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885383550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e952f0d3c4f2f74e820cbc623bf7369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  playerTransform: {fileID: 0}
 --- !u!1 &938722877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0b04b4ee27b36df4c94e4df3ea384a9f,

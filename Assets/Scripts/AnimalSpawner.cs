@@ -6,6 +6,7 @@ public class AnimalSpawner : MonoBehaviour
 {
     public GameObject[] ballPrefabs;  // Array para armazenar os prefabs das bolas
     public float spawnRate = 2.0f;  // Taxa de geração das bolas
+    public int maxAnimals = 10;
     private float nextSpawnTime;
 
     private float contador_animais = 0;
@@ -26,12 +27,19 @@ public class AnimalSpawner : MonoBehaviour
             Debug.LogError("No ball prefabs assigned in the spawner.");
             return;
         }
-        if (contador_animais <= 10)
+        if (contador_animais <= maxAnimals)
         {
             int index = Random.Range(0, ballPrefabs.Length);
             //start on the left side
             Vector3 startPosition = new Vector3(-10, 0, 0);
+            // Instantiate a ball at the start position
+
             GameObject ball = Instantiate(ballPrefabs[index], startPosition, Quaternion.identity);
+            
+            ball.transform.parent = transform;
+
+            
+
             contador_animais++;   
         }
 
