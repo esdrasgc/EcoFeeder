@@ -5,6 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Animal
+  - Projectile
+  - Gecko
+  - Herring
+  - Colobus
+  - Padu
+  - Muskrat
+  - Sparrow
+  - Taipan
+  - banana
+  - alga
+  - maca
+  - carne
+  - capim
+  - queijo
+  - legume
   layers:
   - Default
   - TransparentFX

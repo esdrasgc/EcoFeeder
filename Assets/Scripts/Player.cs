@@ -5,7 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController controller;
+     public GameObject[] projectilePrefab ; // Prefab do objeto que o jogador vai lançar
     public Animator playerAnimator;
+    public int selecionado = 0;
+     public float projectileSpeed = 20.0f; 
     private Vector3 playerVelocity;
     public float playerSpeed = 2.0f;
     private float yValue;
@@ -16,7 +19,15 @@ public class Player : MonoBehaviour
 
     private Rigidbody rb;
 
-
+ void LaunchProjectile()
+    {
+        GameObject projectile = Instantiate(projectilePrefab[selecionado], transform.position + transform.forward, transform.rotation);
+        Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+        if (projectileRb != null)
+        {
+            projectileRb.velocity = transform.forward * projectileSpeed;
+        }
+    }
     private void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
@@ -25,10 +36,28 @@ public class Player : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
+    
+    
+
     void Update()
     {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         move = move.normalized;
+         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            LaunchProjectile();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if(selecionado == 5){
+                selecionado = 0;
+            }else{
+                selecionado++;
+            }
+        
+        }
+      
+       
 
         if (move != Vector3.zero)
         {
