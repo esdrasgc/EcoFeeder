@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
-            if(selecionado == 5){
+            if(selecionado == projectilePrefab.Length - 1){
                 selecionado = 0;
             }else{
                 selecionado++;

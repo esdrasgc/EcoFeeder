@@ -18,7 +18,7 @@ public class objetoNaMao : Player
     {   
         if (Input.GetKeyDown(KeyCode.B))
         {
-            if(selecionado == 5){
+            if(selecionado == prefabs.Length - 1){
                 selecionado = 0;
             }else{
                 selecionado++;
