@@ -29,6 +29,7 @@ public class Animal : MonoBehaviour
     void MoveTowardsPlayer()
     {
         Vector3 direction = (playerTransform.position - transform.position).normalized;
+        direction.y = 0;
         transform.position += direction * speed * Time.deltaTime;
     }
 }
