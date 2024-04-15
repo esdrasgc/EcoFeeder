@@ -413,6 +413,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1157959599}
   m_SourcePrefab: {fileID: 100100000, guid: ebd2fae9ac5f56b4f8851fbe106be773, type: 3}
+--- !u!95 &171571079 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8187451374493336663, guid: cefda5744f2acb54d8f08973a10bee1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 461217464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,9 +651,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6842458599697738422, guid: cefda5744f2acb54d8f08973a10bee1e,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842458599697738422, guid: cefda5744f2acb54d8f08973a10bee1e,
+        type: 3}
       propertyPath: m_TagString
       value: Gecko
       objectReference: {fileID: 0}
+    - target: {fileID: 7806035553715211293, guid: cefda5744f2acb54d8f08973a10bee1e,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 171571079}
     - target: {fileID: 7979196013395532419, guid: cefda5744f2acb54d8f08973a10bee1e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -676,7 +692,7 @@ PrefabInstance:
     - target: {fileID: 7979196013395532419, guid: cefda5744f2acb54d8f08973a10bee1e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3006673
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 7979196013395532419, guid: cefda5744f2acb54d8f08973a10bee1e,
         type: 3}
@@ -866,6 +882,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2989697747312751585, guid: 84b7c8441f160174fa5c6f94cf397f0a,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 1696501882}
     - target: {fileID: 4159006020981459261, guid: 84b7c8441f160174fa5c6f94cf397f0a,
         type: 3}
       propertyPath: m_UseGravity
@@ -889,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 4992758198669102562, guid: 84b7c8441f160174fa5c6f94cf397f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.455596
+      value: -12.74
       objectReference: {fileID: 0}
     - target: {fileID: 4992758198669102562, guid: 84b7c8441f160174fa5c6f94cf397f0a,
         type: 3}
@@ -943,6 +964,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6182162820492919152, guid: 84b7c8441f160174fa5c6f94cf397f0a,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182162820492919152, guid: 84b7c8441f160174fa5c6f94cf397f0a,
+        type: 3}
       propertyPath: m_TagString
       value: Colobus
       objectReference: {fileID: 0}
@@ -992,6 +1018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae1a66ad577ebd4a86dfc3ab194683a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalAnimator: {fileID: 0}
+  animationDeathDuration: 1
   speed: 5
   playerTransform: {fileID: 0}
   bounceForce: 10
@@ -1180,13 +1208,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1342889782683910774, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342889782683910774, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
+        type: 3}
       propertyPath: m_TagString
       value: Herring
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5778694
+      value: 11.74
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
         type: 3}
@@ -1248,11 +1281,22 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8966852525813838581, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 823451432}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
+--- !u!95 &823451432 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7741724734492770376, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 823451431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1428,7 @@ Transform:
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25038, y: 0, z: 0, w: 0.9681477}
-  m_LocalPosition: {x: -10, y: 22.61, z: -43.4}
+  m_LocalPosition: {x: -0, y: 22.61, z: -43.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1401,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 6788538757290762322, guid: ad4137f595ec8e2449cacca9df7d3735,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.3473825
+      value: 7.59
       objectReference: {fileID: 0}
     - target: {fileID: 6788538757290762322, guid: ad4137f595ec8e2449cacca9df7d3735,
         type: 3}
@@ -1455,8 +1499,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788538757290762323, guid: ad4137f595ec8e2449cacca9df7d3735,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788538757290762323, guid: ad4137f595ec8e2449cacca9df7d3735,
+        type: 3}
       propertyPath: m_TagString
-      value: Muskrat
+      value: Sparrow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1474,7 +1523,7 @@ PrefabInstance:
     - target: {fileID: 644027910916855787, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.247741
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 644027910916855787, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
@@ -1484,7 +1533,7 @@ PrefabInstance:
     - target: {fileID: 644027910916855787, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.656241
+      value: -10.69
       objectReference: {fileID: 0}
     - target: {fileID: 644027910916855787, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
@@ -1521,6 +1570,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4205373963913174300, guid: 8cb75dc2fdd63734988b8358f1314d25,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 1008917546}
     - target: {fileID: 4811122469401371914, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1530,6 +1584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Muskrat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4950779065795438720, guid: 8cb75dc2fdd63734988b8358f1314d25,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4950779065795438720, guid: 8cb75dc2fdd63734988b8358f1314d25,
         type: 3}
@@ -1550,6 +1609,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1834592820}
   m_SourcePrefab: {fileID: 100100000, guid: 8cb75dc2fdd63734988b8358f1314d25, type: 3}
+--- !u!95 &1008917546 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9165535137218041895, guid: 8cb75dc2fdd63734988b8358f1314d25,
+    type: 3}
+  m_PrefabInstance: {fileID: 1008917545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072789246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1649,13 @@ MonoBehaviour:
   selecionado: 1
   projectileSpeed: 20
   playerSpeed: 2
+  animalTags:
+  - Colobus
+  - herring
+  - padu
+  - sparrow
+  - muskrat
+  - gecko
   prefabs:
   - {fileID: 682234326}
   - {fileID: 1934686661}
@@ -1658,6 +1730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a124c17c2913819418c6f3daeca7dba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalAnimator: {fileID: 0}
+  animationDeathDuration: 1
   speed: 5
   playerTransform: {fileID: 0}
   bounceForce: 10
@@ -1944,10 +2018,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1641946001377824784, guid: 5b5c678f31981e34f9122b87217da1ac,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 1586499396}
     - target: {fileID: 4807929556901506227, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
       propertyPath: m_Name
       value: Taipan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807929556901506227, guid: 5b5c678f31981e34f9122b87217da1ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4807929556901506227, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
@@ -1959,6 +2043,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8531555221629931683, guid: 5b5c678f31981e34f9122b87217da1ac,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.68
+      objectReference: {fileID: 0}
     - target: {fileID: 8789110679404893150, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
       propertyPath: m_UseGravity
@@ -1967,7 +2056,7 @@ PrefabInstance:
     - target: {fileID: 8999338503545881367, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9300957
+      value: -9.76
       objectReference: {fileID: 0}
     - target: {fileID: 8999338503545881367, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
@@ -1977,7 +2066,7 @@ PrefabInstance:
     - target: {fileID: 8999338503545881367, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.0875301
+      value: -8.98
       objectReference: {fileID: 0}
     - target: {fileID: 8999338503545881367, guid: 5b5c678f31981e34f9122b87217da1ac,
         type: 3}
@@ -2020,6 +2109,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b5c678f31981e34f9122b87217da1ac, type: 3}
+--- !u!95 &1586499396 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3701583169001772672, guid: 5b5c678f31981e34f9122b87217da1ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586499395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1654011641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2028,10 +2123,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 533380284629590636, guid: 252ba5fa5d8167e42af72cf97baa830e,
+        type: 3}
+      propertyPath: animalAnimator
+      value: 
+      objectReference: {fileID: 1654011642}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1956198
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e,
         type: 3}
@@ -2041,7 +2141,7 @@ PrefabInstance:
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0818815
+      value: 6.22
       objectReference: {fileID: 0}
     - target: {fileID: 3161298468613301832, guid: 252ba5fa5d8167e42af72cf97baa830e,
         type: 3}
@@ -2090,6 +2190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5279811246306103102, guid: 252ba5fa5d8167e42af72cf97baa830e,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279811246306103102, guid: 252ba5fa5d8167e42af72cf97baa830e,
+        type: 3}
       propertyPath: m_TagString
       value: Padu
       objectReference: {fileID: 0}
@@ -2103,9 +2208,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 252ba5fa5d8167e42af72cf97baa830e, type: 3}
+--- !u!95 &1654011642 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6147876873679586677, guid: 252ba5fa5d8167e42af72cf97baa830e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1654011641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1696501878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4992758198669102562, guid: 84b7c8441f160174fa5c6f94cf397f0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 550021387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1696501882 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8317233869622344689, guid: 84b7c8441f160174fa5c6f94cf397f0a,
     type: 3}
   m_PrefabInstance: {fileID: 550021387}
   m_PrefabAsset: {fileID: 0}
@@ -2127,6 +2244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da65ab75cf57f4459d356d0c5e1e0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalAnimator: {fileID: 0}
+  animationDeathDuration: 1
   speed: 5
   playerTransform: {fileID: 0}
   bounceForce: 10
@@ -2396,7 +2515,7 @@ PrefabInstance:
     - target: {fileID: 6792327054025522797, guid: 64db8d48fab1ceb43a8ee5d52643029a,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2473,6 +2592,14 @@ MonoBehaviour:
   selecionado: 0
   projectileSpeed: 20
   playerSpeed: 5
+  animalTags:
+  - Colobus
+  - Herring
+  - Padu
+  - Sparrow
+  - Muskrat
+  - Gecko
+  - Taipan
 --- !u!65 &1949213886
 BoxCollider:
   m_ObjectHideFlags: 0

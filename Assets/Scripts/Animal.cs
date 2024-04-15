@@ -1,14 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Animal : MonoBehaviour
 {
+
+    public Animator animalAnimator;  // Referência para o animator do animal
+
+    public float animationDeathDuration = 1.0f;  // Tempo de duração da animação de morte do animal
     public float speed = 5.0f;  // Velocidade padrão de movimento
     public Transform playerTransform;  // Referência para o transform do jogador
 
     public float bounceForce = 150.0f;
     
-    public string alimento ;
+    public string alimento;
   
     // animais.Add("colobus", "banana");
     // animais.Add("herring", "mato");
@@ -69,7 +74,11 @@ public class Animal : MonoBehaviour
             // Faça o que precisar quando o animal for atingido pelo objeto do jogador
             Debug.Log("Animal atingido pelo jogador!");
             // Por exemplo, você pode adicionar um efeito, pontuação, ou remover o animal do jogo.
-            Destroy(gameObject);
+            if (animalAnimator != null){
+                animalAnimator.SetBool("IsDead", true);
+                StartCoroutine(DestroyAnimal());
+            }
+
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("Player")) // Verifica se a colisão foi com o jogador
@@ -82,6 +91,11 @@ public class Animal : MonoBehaviour
 
 
 
+    IEnumerator DestroyAnimal()
+    {
+        yield return new WaitForSeconds(animationDeathDuration);
+        Destroy(gameObject);
+    }
 
     // private void OnCollisionEnter(Collision other);
    

@@ -20,6 +20,7 @@ TagManager:
   - capim
   - queijo
   - legume
+  - muskrat
   layers:
   - Default
   - TransparentFX
